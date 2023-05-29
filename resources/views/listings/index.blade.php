@@ -1,6 +1,8 @@
-@extends('layout')
+{{-- @extends('layout')
 
-@section('content')
+@section('content') --}}
+
+<x-layout>
 
 @include('partials._hero')
 
@@ -28,4 +30,9 @@
     <p>No listings</p>
 @endunless
 </div>
-@endsection
+
+<div class="mt-6 p-4">
+    {{ $listings->links()}}
+</div>
+{{-- @endsection --}}
+</x-layout>
